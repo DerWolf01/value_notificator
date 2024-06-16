@@ -1,9 +1,4 @@
-/// Support for doing something awesome.
-///
-/// More dartdocs go here.
 library;
-
-export 'src/advanced_change_notifier_base.dart';
 
 typedef AdvancedChangeNotifierCallback<T> = Future<void> Function(T? value);
 

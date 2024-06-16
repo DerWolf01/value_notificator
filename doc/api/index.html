@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="advanced_change_notifier API docs, for the Dart programming language.">
+  <title>advanced_change_notifier - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="https://github.com/DerWolf01/advanced_change_notifier/blob/main/README.md">advanced_change_notifier package</a></li>
+  </ol>
+  <div class="self-name">advanced_change_notifier</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <!-- 
+This README describes the package. If you publish this package to pub.dev,
+this README's contents appear on the landing page for your package.
+
+For information about how to write a good package README, see the guide for
+[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+
+For general information about developing packages, see the Dart guide for
+[creating packages](https://dart.dev/guides/libraries/create-library-packages)
+and the Flutter guide for
+[developing packages and plugins](https://flutter.dev/developing-packages). 
+-->
+<h2 id="main-purpose">Main purpose</h2>
+<p>This package helps you ensuring your services and widgets are always notified and provided with the proper values whenever a change happens in order to avoid unneccessary requests and method calls after an event.</p>
+<h2 id="features">Features</h2>
+<p>In order to avoid unnecessary method calls just to retrieve the new values, this package resembles the known "ChangeNotifier" with the difference of the new values being passed to the listeners by the notifier.</p>
+<h2 id="usage">Usage</h2>
+<p>You can either use the abse class to extend from it or use it as an mixin.
+The base class takes an generic type argument and makes sure you are always provided with the changes on any event.</p>
+<pre class="language-dart"><code class="language-dart">class ChatService extends AdvancedChangeNotifier&lt;String&gt; {
+  sendMessage(String text) {
+    print("He said: '$text'");
+    notifyListeners(value: text);
+  }
+}
+</code></pre>
+<h2 id="additional-information">Additional information</h2>
+<p>This package is exceptionally usefule when using it on widgets or their services and can help reducing redundant or unneccessary code by avoiding to request data again everytime an event happens but passing it over with the listener itsself instead.</p>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="advanced_change_notifier">
+  <span class="name"><a href="advanced_change_notifier/advanced_change_notifier-library.html">advanced_change_notifier</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+        </dl>
+      </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="https://github.com/DerWolf01/advanced_change_notifier/blob/main/README.md">advanced_change_notifier package</a></li>
+</ol>
+
+
+    <h5 class="hidden-xs"><span class="package-name">advanced_change_notifier</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="advanced_change_notifier/advanced_change_notifier-library.html">advanced_change_notifier</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    advanced_change_notifier
+      1.0.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

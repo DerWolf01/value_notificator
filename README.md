@@ -10,30 +10,29 @@ For general information about developing packages, see the Dart guide for
 and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
+## Main purpose
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+This package helps you ensuring your services and widgets are always notified and provided with the proper values whenever a change happens in order to avoid unneccessary requests and method calls after an event.
+
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+In order to avoid unnecessary method calls just to retrieve the new values, this package resembles the known "ChangeNotifier" with the difference of the new values being passed to the listeners by the notifier.
 
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
+You can either use the abse class to extend from it or use it as an mixin.
+The base class takes an generic type argument and makes sure you are always provided with the changes on any event.
 ```dart
-const like = 'sample';
+class ChatService extends AdvancedChangeNotifier<String> {
+  sendMessage(String text) {
+    print("He said: '$text'");
+    notifyListeners(value: text);
+  }
+}
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+This package is exceptionally usefule when using it on widgets or their services and can help reducing redundant or unneccessary code by avoiding to request data again everytime an event happens but passing it over with the listener itsself instead.

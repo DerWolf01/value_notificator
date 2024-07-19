@@ -1,7 +1,6 @@
 name: advanced_change_notifier
-description: A starting point for Dart libraries or applications.
+description: A ChangeNotfier alternative used to avoid redundant code .
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
 
 homepage: https://github.com/DerWolf01/advanced_change_notifier/blob/main/README.md
 repository: https://github.com/DerWolf01/advanced_change_notifier/

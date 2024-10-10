@@ -28,7 +28,7 @@ The base class takes an generic type argument and makes sure you are always prov
 class ChatService extends ValueNotificator<String> {
   sendMessage(String text) {
     print("He said: '$text'");
-    notifyListeners(value: text);
+    notifyListeners(text);
   }
 }
 ```

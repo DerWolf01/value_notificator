@@ -25,7 +25,7 @@ In order to avoid unnecessary method calls just to retrieve the new values, this
 You can either use the abse class to extend from it or use it as an mixin.
 The base class takes an generic type argument and makes sure you are always provided with the changes on any event.
 ```dart
-class ChatService extends AdvancedChangeNotifier<String> {
+class ChatService extends ValueNotificator<String> {
   sendMessage(String text) {
     print("He said: '$text'");
     notifyListeners(value: text);

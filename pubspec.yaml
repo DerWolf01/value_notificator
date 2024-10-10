@@ -1,6 +1,6 @@
-name: advanced_change_notifier
+name: value_notificator
 description: A ChangeNotfier alternative used to avoid redundant code .
-version: 1.0.0
+version: 1.0.1
 
 homepage: https://github.com/DerWolf01/advanced_change_notifier/blob/main/README.md
 repository: https://github.com/DerWolf01/advanced_change_notifier/
